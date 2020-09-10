@@ -28,6 +28,7 @@ urlpatterns = [
     url(r"^accounts/", include("django.contrib.auth.urls")),
     url(r"^profile/" , include('userprofile.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^try_check/', views.ThanksPage.as_view(), name="thanks"),
 ]
 
 if settings.DEBUG:
